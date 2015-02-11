@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #666;
+    font-family: 'lato' sans-serif;
+    font-size: 16px;
+    padding-top: 60px;
+}
+
+.main-title {
+    color: #555;
+    font-size: 5rem;
+}
+
+.title-blue {
+    color: #1292FF;
+}
+
+.signup-text {
+    color: #31B0D5;
+}
+
+.shim {
+    margin-bottom: 30px;
+}
+
+.underline {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.signup-btn-block {
+    margin-top: 30px;
+}
+
+.signup-btn-body {
+    width: 75%;
+}
+
+.mini-text a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.learn-more {
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+
+.learning {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    color: #aaa;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.footer-nav {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-nav li {
+    display: inline-block;
+    float: none;
+}
