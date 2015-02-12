@@ -10,7 +10,6 @@ $(document).on('ready', function() {
     });
     $(document).on('click', '.easy-mode', function() {
         diff = 'easy';
-
     });
     $(document).on('click', '.medium-mode', function() {
         diff = 'medium';
