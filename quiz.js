@@ -31,19 +31,24 @@ var populate = function(qtype){
 };
 
 var checker = function() {
-    if(questionList[questionCounter].type === "mc"){
+    questionCounter ++;
+
+    if(questionList[questionCounter-1].type === "mc"){
         $('.current-question-fitb').addClass('hidden');
         $('.current-question-mc').removeClass('hidden');
-        questionCounter ++;
         populate("mc");
-    } else if(questionList[questionCounter].type === "fitb"){
+    } else if(questionList[questionCounter-1].type === "fitb"){
         $('.current-question-mc').addClass('hidden');
         $('.current-question-fitb').removeClass('hidden');
-        questionCounter ++;
         populate("fitb");
     }
-}
+};
 
+var finisher = function() {
+    $('#final-modal').modal('show');
+    $('#correct').text(correctQuestions + " ");
+    $('#total').text(totalQuest + " ");
+};
 
 
 $(document).on('ready', function() {
@@ -61,7 +66,9 @@ $(document).on('ready', function() {
             $(document).on('click', '#next-btn', function(){
                 $('#quiz-modal').modal('hide');
                 $('#next-btn').removeClass('btn-good');
-                checker();
+                if (questionCounter === totalQuest){
+                    return finisher();
+                }
             });
         } else {
             $('#h4-label').text('Wrong Answer!');
@@ -70,10 +77,14 @@ $(document).on('ready', function() {
             $(document).on('click', '#next-btn', function(){
                 $('#next-btn').removeClass('btn-bad');
                 $('#quiz-modal').modal('hide');
-                checker();
+                if (questionCounter === totalQuest){
+                    return finisher();
+                }
             });
         }
+        checker();
     });
+
     $(document).on('click', '.fitb-btn', function(e){
         console.log('yay')
         e.preventDefault();
@@ -85,7 +96,9 @@ $(document).on('ready', function() {
             $(document).on('click', '#next-btn', function(){
                 $('#quiz-modal').modal('hide');
                 $('#next-btn').removeClass('btn-good');
-                checker();
+                if (questionCounter === totalQuest){
+                    return finisher();
+                }
             });
         } else {
             $('#h4-label').text('Wrong Answer!');
@@ -94,8 +107,11 @@ $(document).on('ready', function() {
             $(document).on('click', '#next-btn', function(){
                 $('#next-btn').removeClass('btn-bad');
                 $('#quiz-modal').modal('hide');
-                checker();
+                if (questionCounter === totalQuest){
+                    return finisher();
+                }
             });
         }
+        checker();
     });
 });
