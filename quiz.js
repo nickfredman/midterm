@@ -32,7 +32,6 @@ var populate = function(qtype){
 
 var checker = function() {
     questionCounter ++;
-
     if(questionList[questionCounter-1].type === "mc"){
         $('.current-question-fitb').addClass('hidden');
         $('.current-question-mc').removeClass('hidden');
@@ -66,7 +65,7 @@ $(document).on('ready', function() {
             $(document).on('click', '#next-btn', function(){
                 $('#quiz-modal').modal('hide');
                 $('#next-btn').removeClass('btn-good');
-                if (questionCounter === totalQuest){
+                if (questionCounter > totalQuest){
                     return finisher();
                 }
             });
@@ -77,16 +76,15 @@ $(document).on('ready', function() {
             $(document).on('click', '#next-btn', function(){
                 $('#next-btn').removeClass('btn-bad');
                 $('#quiz-modal').modal('hide');
-                if (questionCounter === totalQuest){
+                if (questionCounter > totalQuest){
                     return finisher();
                 }
             });
         }
-        checker();
-    });
+          checker();
+      });
 
     $(document).on('click', '.fitb-btn', function(e){
-        console.log('yay')
         e.preventDefault();
         if($('#fitb-answer').val() === questionList[questionCounter-1].answer){
             correctQuestions ++;
@@ -96,7 +94,7 @@ $(document).on('ready', function() {
             $(document).on('click', '#next-btn', function(){
                 $('#quiz-modal').modal('hide');
                 $('#next-btn').removeClass('btn-good');
-                if (questionCounter === totalQuest){
+                if (questionCounter > totalQuest){
                     return finisher();
                 }
             });
@@ -107,11 +105,11 @@ $(document).on('ready', function() {
             $(document).on('click', '#next-btn', function(){
                 $('#next-btn').removeClass('btn-bad');
                 $('#quiz-modal').modal('hide');
-                if (questionCounter === totalQuest){
+                if (questionCounter > totalQuest){
                     return finisher();
                 }
             });
         }
-        checker();
+          checker();
     });
 });
