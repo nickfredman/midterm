@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Code Quiz</title>
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+
+    <body>
+
+        <header class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/index.html">
+                    <strong>Code<span class="title-blue">Quiz</span></strong>
+                    </a>
+                </div>
+
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="pricing.html">Plans & Pricing</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="demo.html">Demo</a></li>
+            <li><a href="signup.html"><span class="signup-text">Sign Up</span></a></li>
+            </ul>
+        </header>
+
+
+        <!-- Answer Modal -->
+        <div class="modal quiz-modal fade" id="quiz-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header quiz-modal-title">
+                <h4 class="modal-title" id="h4-label">Correct!</h4>
+              </div>
+              <div class="modal-body pull-right">
+                <button type="button" id="next-btn" class="next btn btn-lg">Next Question</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal WRONG -->
+       <!--  <div class="modal quiz-modal-wrong fade" id="quiz-modal-wrong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header quiz-modal-title">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Wrong Answer!</h4>
+              </div>
+              <div class="modal-body pull-right">
+                <button type="button" class="next-wrong btn btn-danger btn-lg">Next Question</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="container">
+            <div class="row">
+                <div class="title">
+                    <h1 class="lang diff main-title text-center">JavaScript: <span><em>Easy</em></span></h1>
+                </div>
+                <div class="well questionnaire">
+                    <div class="question-num pull-right">
+                        <p id="question-number"></p>
+                    </div>
+                    <!-- MC Questions -->
+                    <div class="current-question-mc col-md-6 col-md-offset-3">
+                        <div class="mc-question-text text-center">
+                            <p></p>
+                        </div>
+                        <div class="mc-question-answers text-center">
+                            <button id="answer1" class="mc-btn btn btn-lg btn-info"></button>
+                            <button id="answer2" class="mc-btn btn btn-lg btn-info"></button>
+                            <button id="answer3" class="mc-btn btn btn-lg btn-info"></button>
+                            <button id="answer4" class="mc-btn btn btn-lg btn-info"></button>
+                        </div>
+                    </div>
+                    <!-- FITB Questions -->
+                    <div class="current-question-fitb col-md-6 col-md-offset-3">
+                        <div class="fitb-question-text text-center">
+                            <p></p>
+                        </div>
+                        <div class="fitb-question-answer text-center">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label>Answer:</label>
+                                    <input type="text" class="form-control" id="fitb-answer" placeholder="ex - join">
+                                </div>
+                                <button type="submit" class="fitb-btn btn btn-info">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer navbar navbar-default navbar-static-bottom">
+            <div class="container">
+                <div class="row">
+                    <ul class="nav navbar-nav footer-nav col-md-12 text-center">
+                      <li><a href="terms.html">terms</a></li>
+                      <li><a href="privacy.html">privacy</a></li>
+                      <li><a href="mailto:contact@codequiz.net">contact</a></li>
+                      <li><a href="#"><small>&copy; 2015 CodeQuiz</small></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
+    <script src="main.js"></script>
+    <script src="javascript-questions.js"></script>
+    <script src="quiz.js"></script>
+
+    </body>
+</html>

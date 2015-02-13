@@ -4,8 +4,8 @@ var diff, currentLang;
 
 $(document).on('ready', function() {
     $(document).on('click', '.lang-box', function() {
-        $('#js-modal').modal('show');
-        currentLang = $(this).val();
+        $('#modal').modal('show');
+        currentLang = $(this).find('.language').text();
         console.log(currentLang);
     });
     $(document).on('click', '.easy-mode', function() {
@@ -17,4 +17,5 @@ $(document).on('ready', function() {
     $(document).on('click', '.hard-mode', function() {
         diff = 'hard';
     });
+
 });
