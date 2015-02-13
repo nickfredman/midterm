@@ -17,5 +17,7 @@ $(document).on('ready', function() {
     $(document).on('click', '.hard-mode', function() {
         diff = 'hard';
     });
-
+    $(document).on('click', '.signup', function(){
+        $('#signup').modal('show');
+    });
 });

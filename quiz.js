@@ -7,7 +7,7 @@ if (diff === 'easy') {
     totalQuest = 15;
 }   else if (diff === 'hard') {
     totalQuest = 20;
-};
+}
 
 var questionList, questionCounter, currentAnswer, mcAnswers, correctQuestions;
 

@@ -6,7 +6,6 @@ body {
     color: #666;
     font-family: 'lato' sans-serif;
     font-size: 16px;
-    /*padding-top: 60px;*/
 }
 
 .footer-main {
@@ -23,6 +22,7 @@ body {
 .main-title {
     color: #555;
     font-size: 5rem;
+    margin-bottom: 50px;
 }
 
 .title-blue {
@@ -32,6 +32,32 @@ body {
 .signup-text {
     color: #31B0D5;
 }
+
+.signup-form {
+  text-align: left;
+}
+
+.signup-form label {
+  margin-left: 20px;
+  width: 120px;
+}
+
+.signup-form div {
+    display: inline-block;
+}
+
+.signup-button {
+  text-align: right;
+  margin-top: 40px;
+  height: 40px
+}
+
+.modal-body .signup-button a {
+    margin-left: 30px;
+    width: 90%;
+    height: 40px;
+}
+
 
 .shim {
     margin-bottom: 30px;
@@ -57,6 +83,10 @@ body {
     color: #aaa;
 }
 
+.top-content {
+    margin-bottom: 60px;
+}
+
 .learn-more {
     margin-top: 40px;
     font-size: 1.5rem;
@@ -64,7 +94,6 @@ body {
 
 .learning {
     margin-top: 10px;
-    margin-bottom: 20px;
 }
 
 .footer {
